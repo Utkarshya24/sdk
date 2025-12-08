@@ -891,10 +891,10 @@ export default class SandboxSDK {
           reject(new SandboxError(res.error || "Job failed"));
         }
       };
-
+      const encodedPayload = Buffer.from(JSON.stringify(payload));
       this.trackListener(SocketEvent.RESULT, listener);
       this.socket.on(SocketEvent.RESULT, listener as any);
-      this.socket.emit(event, jobId, payload);
+      this.socket.emit(event, jobId, encodedPayload);
     });
   }
 
