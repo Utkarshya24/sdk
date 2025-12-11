@@ -2,14 +2,14 @@
   "name": "sdb-x-sdk",
   "version": "1.0.0",
   "description": "Powerful TypeScript SDK for managing isolated code execution environments",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "module": "dist/esm/index.js",
+  "main": "dist/agent.js",
+  "types": "dist/agent.d.ts",
+  "module": "dist/esm/agent.js",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/esm/index.js"
+      "types": "./dist/agent.d.ts",
+      "require": "./dist/agent.js",
+      "import": "./dist/esm/agent.js"
     }
   },
   "files": [
@@ -61,6 +61,7 @@
   },
   "homepage": "https://github.com/utkarshya24/sdb-x-sdk#readme",
   "dependencies": {
+    "axios": "^1.13.2",
     "socket.io-client": "^4.8.1",
     "uuid": "^9.0.0"
   },
